@@ -19,6 +19,14 @@ public class Pracownik {
         wynagrodzenie = stanowisko.getPensja();
     }
 
+    public String getNazwaFirmy() {
+        return nazwaFirmy;
+    }
+
+    public void setNazwaFirmy(String nazwaFirmy) {
+        this.nazwaFirmy = nazwaFirmy;
+    }
+
     public String getImie() {
         return imie;
     }
