@@ -11,12 +11,17 @@ public class Pracownik {
     private Stanowisko stanowisko;
 
     public Pracownik(String imie, String nazwisko, String nazwaFirmy, String email, Stanowisko stanowisko) {
-        this.imie = imie;
-        this.nazwisko = nazwisko;
-        this.nazwaFirmy = nazwaFirmy;
-        this.email = email;
-        this.stanowisko = stanowisko;
-        wynagrodzenie = stanowisko.getPensja();
+        if(imie != null && nazwisko != null && nazwaFirmy != null && email != null) {
+            this.imie = imie;
+            this.nazwisko = nazwisko;
+            this.nazwaFirmy = nazwaFirmy;
+            this.email = email;
+            this.stanowisko = stanowisko;
+            wynagrodzenie = stanowisko.getPensja();
+        } else {
+            throw new IllegalArgumentException("Zadna wartosc nie moze byc nullem");
+        }
+
     }
 
     public String getNazwaFirmy() {
